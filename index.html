@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Resume</title>
+  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+  <div id="main">
+    <div id="header" class="center-content clear-fix">
+      <ul id="top-contacts" class="flex-box"></ul>
+    </div>
+    <div style="clear: both;"></div>
+    <div id="work-experience">
+      <h2>Work Experience</h2>
+    </div>
+    <div id="projects">
+      <h2>Projects</h2>
+    </div>
+    <div id="education">
+      <h2>Education</h2>
+    </div>
+    <div id="map-div">
+      <h2>Where I've Lived and Worked</h2>
+    </div>
+    <!--<div id="lets-connect" class="dark-gray">
+      <h2 class="button center-text">CONTACT ME</h2>
+        <ul id="footer-contacts" class="flex-box">
+      </ul>
+    </div>-->
+    <div id="fab-button"></div>
+  </div>
+
+  <script src="js/jQuery.js"></script>
+
+  <script src="js/vanilla.js"></script>
+
+  <script src="js/helper.js"></script>
+
+  <script src="js/resumeBuilder.js"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFIkkUzJ45vp_BLVfwcAIaAR8bm5z4Ggs&libraries=places&callback=initMap"></script>
+
+  <script>
+      if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('top-contacts').style.display = 'block';
+      document.getElementById('top-contacts').style.background = '#000';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.display = 'block';
+      document.getElementById('header').style.background = '#000';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('work-experience').style.display = 'block';
+      document.getElementById('work-experience').style.background = '#000';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'block';
+      document.getElementById('projects').style.background = '#000';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.display = 'block';
+      document.getElementById('education').style.background = '#000';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('lets-connect').style.display = 'block';
+      document.getElementById('lets-connect').style.background = '#000';
+    }
+    if(document.getElementById('map') === null) {
+      document.getElementById('map-div').style.display = 'block';
+      document.getElementById('map-div').style.background = '#000';
+    }
+  </script>
+</body>
+</html>
