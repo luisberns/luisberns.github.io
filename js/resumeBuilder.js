@@ -3,7 +3,7 @@ var bio = {
 	"name" : "Luis Guilherme Berns Silva",
 	"role" : "UX Designer",
 	"welcomeMessage" : "I'm passionate for User Experience and how technology can help people to achieve their goals and dreams.",
-	"bioPic" : "images/me.jpg",
+	"biopic" : "images/me.jpg",
 	"contacts" : [
 		{
 			"mobile" : "+55 044 9 9972-5926",
@@ -15,7 +15,7 @@ var bio = {
 	],
 	"skills" : [ "HTML/CSS", "Javascript/jQuery", "Project Management", "SCRUM", "Inkscape" ],
 	"display" : function () {
-		var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+		var formattedPic = HTMLbiopic.replace("%data%", bio.biopic);
 		$("#header").append(formattedPic);
 
 		var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -28,19 +28,28 @@ var bio = {
 		$("#header").prepend(formattedName);
 
 		bio.contacts.forEach(function(contact) {
+			var insert = function (e, c) {
+				$(e).attr("href", c);
+			}
 			/*var formattedMobile = HTMLmobile.replace("%data%", contact.mobile);*/
 			var formattedEmail = HTMLemail.replace("%data%", contact.email[0]);
 			var formattedlinkedin = HTMLlinkedin.replace("%data%", contact.linkedin[0]);
 			var formattedGitHub = HTMLgithub.replace("%data%", contact.github[0]);
 			var formattedLocation = HTMLlocation.replace("%data%", contact.location[0]);
 			var displayContacts = formattedEmail + formattedlinkedin + formattedGitHub + formattedLocation;
+			var email = contact.email[1];
+			var linkedin = contact.linkedin[1];
+			var github = contact.github[1];
+			var location = contact.location[1];
 
 			$("#top-contacts").append(displayContacts);
+			$("#footer-contacts").append(displayContacts);
 
-			$("#contact-email").attr("href", contact.email[1]);
-			$("#contact-linkedin").attr("href", contact.linkedin[1]);
-			$("#contact-github").attr("href", contact.github[1]);
-			$("#contact-location").attr("href", contact.location[1]);
+			insert(".contact-email", email);
+			insert(".contact-linkedin", linkedin);
+			insert(".contact-github", github);
+			insert(".contact-location", location);
+
 			$(".contact-url").attr("target", "_blank");
 
 			var emailImage = contact.email[2];
@@ -49,13 +58,13 @@ var bio = {
 			var locationImage = contact.location[2];
 			var displayImages = [emailImage, linkedinImage, githubImage, locationImage];
 
-			$("#contact-email").children().attr("src", displayImages[0]);
-			$("#contact-linkedin").children().attr("src", displayImages[1]);
-			$("#contact-github").children().attr("src", displayImages[2]);
-			$("#contact-location").children().attr("src", displayImages[3]);
+			$(".contact-email").children().attr("src", displayImages[0]);
+			$(".contact-linkedin").children().attr("src", displayImages[1]);
+			$(".contact-github").children().attr("src", displayImages[2]);
+			$(".contact-location").children().attr("src", displayImages[3]);
 		});
 	}
-}
+};
 
 var skills = {
 	"skill": [
@@ -134,7 +143,7 @@ var skills = {
 		}
 		callRanges();
 	}
-}
+};
 
 var education = {
 	"schools" : [
@@ -208,7 +217,7 @@ var education = {
 		});
 
 	}
-}
+};
 
 var work = {
 	"jobs" : [
@@ -267,7 +276,7 @@ var work = {
 			}
 		});
 	}
-}
+};
 
 var projects = {
 	"project" : [
@@ -326,7 +335,7 @@ var projects = {
 			});
 		}
 	}
-}
+};
 
 var floatActionButton = {
 	"source": "images/fab-button.svg",
@@ -358,7 +367,7 @@ var floatActionButton = {
 	    });
 		}
 	}
-}
+};
 
 /*Insert content*/
 bio.display();
@@ -375,6 +384,3 @@ $("#main").children().attr("class", "center-content");
 $(".center-content:nth-child(2)").attr("id", "holder");
 $(".ordered-list").children().attr("class", "list-style");
 $(".center-content:nth-child(odd)").addClass("gray");
-
-/*Actions*/
-//$(".button").click(function () {});

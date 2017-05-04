@@ -3,19 +3,19 @@ var HTMLheaderRole = '<span id="role">%data%</span><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="white-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><a href="#" id="contact-email" class="contact-url"><img src="#" class="contact-img"></img><span class="white-text">%data%</span></li>';
-var HTMLlinkedin = '<li class="flex-item"><a href="#" id="contact-linkedin" class="contact-url"><img src="#" class="contact-img"></img><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><a href="#" id="contact-github" class="contact-url"><img src="#" class="contact-img"></img><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><a href="#" class="contact-email" class="contact-url"><img src="#" class="contact-img"></img><span class="white-text">%data%</span></li>';
+var HTMLlinkedin = '<li class="flex-item"><a href="#" class="contact-linkedin" class="contact-url"><img src="#" class="contact-img"></img><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><a href="#" class="contact-github" class="contact-url"><img src="#" class="contact-img"></img><span class="white-text">%data%</span></li>';
 var HTMLblog = '<li class="flex-item"><a href="#" class="contact-url"><img src="#" class="contact-img"></img><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><a href="#" id="contact-location"><img src="#" class="contact-img"></img><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><a href="#" class="contact-location"><img src="#" class="contact-img"></img><span class="white-text">%data%</span></li>';
 
-var HTMLbioPic = '<div class="biopic-container"><img src="%data%" class="biopic"></div>';
+var HTMLbiopic = '<div class="biopic-container"><img src="%data%" class="biopic"></div>';
 var HTMLwelcomeMsg = '<br><div class="welcome-message">%data%</div><br>';
 
 var HTMLskillsStart = '<div id="skills-entry"><ul id="skills" class="flex-column"></ul></div>';
 var HTMLskillsTitle = '<br><h3 id="skills-h3">Skills at a Glance:</h3>';
 var HTMLskills = '<li class="flex-item skill-item"><div class="white-text skill-title">%data%</div>';
-var HTMLskillsValue = '<div class="skill-value"><div class="skill-range"></div></div></li>'
+var HTMLskillsValue = '<div class="skill-value"><div class="skill-range"></div></div></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<div class="work-item"><br><h3 class="title-work">%data%';
@@ -33,7 +33,7 @@ var HTMLprojectDescription = '<p class="project-paragraph">%data%</p>';
 var HTMLprojectImage = '<div class="project-img-container"><img src="%data%" class="project-img"></div>';
 var HTMLprojectURL = '<a href="#" class="project-link">%data%</a>';
 var HTMLprojectOrdered = '<ul class="ordered-list"></ul>';
-var HTMLprojectBullets = '<li>%data%</li>'
+var HTMLprojectBullets = '<li>%data%</li>';
 
 var HTMLschoolStart = '<div class="education-entry">';
 var HTMLschoolName = '<div><h3 class="title-education">%data%';
@@ -49,7 +49,7 @@ var HTMLonlineDates = '<div class="date-text">%data%</div></div><br>';
 var HTMLonlineURL = '<br><a href="#">%data%</a></div>';
 
 var internationalizeButton = '<button>Internationalize</button>';
-var FABbutton = '<img src="#" id="fab-image">'
+var FABbutton = '<img src="#" id="fab-image">';
 var googleMap = '<div id="map"></div>';
 
 
@@ -67,7 +67,7 @@ function initMap() {
   function locationFinder() {
     var locations = [];
 
-    locations.push(bio.contacts[0].location);
+    locations.push(bio.contacts[0].location[0]);
 
     education.schools.forEach(function(school){
       locations.push(school.location);

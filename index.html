@@ -26,11 +26,9 @@
     <div id="map-div">
       <h2>Where I've Lived and Worked</h2>
     </div>
-    <!--<div id="lets-connect" class="dark-gray">
-      <h2 class="button center-text">CONTACT ME</h2>
-        <ul id="footer-contacts" class="flex-box">
-      </ul>
-    </div>-->
+    <div id="footer">
+      <ul id="footer-contacts" class="flex-box"></ul>
+    </div>
     <div id="fab-button"></div>
   </div>
 
@@ -66,8 +64,8 @@
       document.getElementById('education').style.background = '#000';
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'block';
-      document.getElementById('lets-connect').style.background = '#000';
+      document.getElementById('footer-contacts').style.display = 'block';
+      document.getElementById('footer-contacts').style.background = '#000';
     }
     if(document.getElementById('map') === null) {
       document.getElementById('map-div').style.display = 'block';
