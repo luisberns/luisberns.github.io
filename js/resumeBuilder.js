@@ -42,8 +42,7 @@ var bio = {
 			var github = contact.github[1];
 			var location = contact.location[1];
 
-			$("#top-contacts").append(displayContacts);
-			$("#footer-contacts").append(displayContacts);
+			$("#top-contacts, #footer-contacts").append(displayContacts);
 
 			insert(".contact-email", email);
 			insert(".contact-linkedin", linkedin);
@@ -226,11 +225,10 @@ var work = {
 			"title" : "Web Developer",
 			"location" : "Maringá-PR",
 			"dates" : "JAN/2017 - PRESENT",
-			"description" : "E-business development focusing on digital marketing results and better User Experience, improving results with client’s interaction and data analysis.",
+			"description" : "Focused on digital marketing and better User Experience, and improved results with client interaction and data analysis.",
 			"bulletPoints" : [
-				"Web development using agile method and learning with the final client in beta process.",
-				"Applied Material Design from Google in web development projects.",
-				"Analyse results and user data to improve SEO and User Experience (UX)."
+				"Developed 2 websites using Agile methodology and learned with the final client in the beta process.",
+				"Developed a brand identity for 2 web development clients and utilized Material Design from Google for web design."
 			]
 		},
 		{
@@ -238,11 +236,10 @@ var work = {
 			"title" : "Project Assistant",
 			"location" : "Maringá-PR",
 			"dates" : "MAR/2016 - PRESENT",
-			"description" : "Project Manager of Innovation and Technology projects, working with multidisciplinary teams in healthcare sector.",
+			"description" : "Worked with multidisciplinary teams in the healthcare sector as a project manager.",
 			"bulletPoints" : [
-				"Project manager of 1st hackathon produced by this cooperative health insurance in Brazil.",
-				"Manage series of projects focused on information technology in the healthcare system.",
-				"Include learning process between the development of project management methodology used by PMO."
+				"Managed the 1st hackathon produced by this cooperative health insurance in Brazil with 130 participants and 26 projects developed.",
+				"Managed a series of strategic projects with teams of 10-20 people and an average of 6 months duration, focused mainly on IT in the healthcare system."
 			]
 		},
 		{
@@ -250,11 +247,10 @@ var work = {
 			"title" : "Project Internship",
 			"location" : "Maringá-PR",
 			"dates" : "MAR/2015 - MAR/2016",
-			"description" : "Assist the PMO team in projects management, assuming the administrative work in the office, handling documents and controlling acquisitions.",
+			"description" : "Assisted and managed projects in the PMO focusing on IT projects and research of tools and technologies used by a team of 4 project managers.",
 			"bulletPoints" : [
-				"Improved project management methodology and created material for others professionals learn easily how to do it.",
-				"Assist on project management and keeping follow-ups managing projects documents and acquisitions.",
-				"Search and study knew tools and technologies to create or increment projects in health sector."
+				"Improved project management methodology and created materials for others professionals learn how to do it, which is currently used by 30-50 people in 7 departments.",
+				"Assisted project managers and managed project documents, acquisitions, and PMO portfolios of 20-30 projects."
 			]
 		}
 	],
@@ -283,26 +279,23 @@ var projects = {
 		{
 			"title" : "Alphagreen",
 			"dates" : "JAN/2017",
-			"description" : "Fully responsible institucional site for a real estate business, including available real estate deals gallery \n Developed site with stages of validation with the end user and collecting feedbacks for improve User Experience \n Clean code, no frameworks for stylish web design and minimal content making easier user access in any device or connection",
+			"description" : "Created an institution website for a real estate business, which included a JS gallery with available deals.",
 			"bulletPoints" : [
-				"Fully responsible institucional site for a real estate business, including available real estate deals gallery.",
-				"Developed site with stages of validation with the end user and collecting feedbacks for improve User Experience.",
-				"Clean code, no frameworks for stylish web design and minimal content making easier user access in any device or connection."
+				"Developed web project with various stages of validation, and obtained almost 50 users, updating based on constant feedback.",
+				"Inserted Google Apps form, which allows entry of data to be saved in a Google spreadsheet and provides notifications of new entries via email."
 			],
 			"url" : "http://www.negociosalphagreen.com.br/",
 			"images" : ["images/projects/alphagreen-one.png", "images/projects/alphagreen-two.png"]
 		},
 		{
-			"title" : "Oh Yeah",
-			"dates" : "MAR/2017",
-			"description" : "Fully responsible e-commerce with design patterns from Google for a target market \n Developed site with stages of validation with the end user and collecting feedbacks for improve User Experience \n Constant market and results analysis for applying improvements in market strategies",
+			"title" : "Hackathon",
+			"dates" : "AUG/2016",
+			"description" : "Created a hot site for hackathon of Unimed’s healthcare cooperative that was fully responsive with minimum content to improve accessibility and load times.",
 			"bulletPoints" : [
-				"Fully responsible e-commerce with design patterns from Google for a target market.",
-				"Developed site with stages of validation with the end user and collecting feedbacks for improve User Experience.",
-				"Constant market and results analysis for applying improvements in market strategies."
+				"Resulted in more than 500 visits to the site (1 month) and 130 people enrolled resulting in 26 prototypes developed."
 			],
-			"url" : "http://www.ohyeahshop.com.br/",
-			"images" : ["images/projects/ohyeah-one.png", "images/projects/ohyeah-two.png"]
+			"url" : "http://www.unimedmaringa.com.br/hackathon/",
+			"images" : ["images/projects/hackathon-one.png", "images/projects/hackathon-two.png"]
 		}
 	],
 	"display" : function() {
