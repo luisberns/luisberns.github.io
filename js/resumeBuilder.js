@@ -376,4 +376,5 @@ $("#map-div").append(googleMap);
 $("#main").children().attr("class", "center-content");
 $(".center-content:nth-child(2)").attr("id", "holder");
 $(".ordered-list").children().attr("class", "list-style");
-$(".center-content:nth-child(odd)").addClass("gray");
+$(".center-content:nth-child(even)").addClass("gray");
+$("#html").css("background-color", "white");
