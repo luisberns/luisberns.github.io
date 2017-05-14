@@ -412,6 +412,9 @@ span {
   #map {
     height: 80%;
   }
+  .project-img-container {
+    max-width: 250px
+  }
 }
 
 @media only screen and (max-width: 400px) {
