@@ -1,88 +1,48 @@
-<!DOCTYPE html>
-<html id="html">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Luis Guilherme Berns Silva - Ux Designer - Resume</title>
-  <link href="css/style.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="shotcut icon" href="images/fav-icon.png">
-  <style media="screen">
-    html {background-color: black;}
-  </style>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PF6CVLN');</script>
-  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>|> Luis Guilherme Berns Silva</title>
+  <link rel="stylesheet" href="css/app.css">
 </head>
+<body id="content-body">
+  <header id="header">
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PF6CVLN"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <div id="main">
-    <div id="header" class="center-content clear-fix">
-      <ul id="top-contacts" class="flex-box"></ul>
+  </header>
+  <section id="main-content">
+    <div id="content-canvas">
+      <div id="greeting-block">
+        <h1>|> Luís Berns</h1>
+        <h2 id="g-title">UX Designer &amp; Front-end Dev</h2>
+        <p id="g-message"></p>
+      </div>
+      <div id="img-block">
+        <img src="" alt="">
+      </div>
+      <div id="data-block">
+          <ul id="info-list">
+            <a href="mailto:louisuntitled@gmail.com" class="list-item">
+              <li class="item-data"><img src="img/email.svg" alt="E-mail info icon"><span>louisuntitled@gmail.com</span></li>
+            </a>
+            <a href="https://www.linkedin.com/in/louisberns/" target="_blank" class="list-item">
+              <li class="item-data"><img src="img/linkedin.svg" alt="Linkedin info icon"><span>/in/louisberns</span></li>
+            </a>
+            <a href="https://github.com/louisberns" target="_blank" class="list-item">
+              <li class="item-data"><img src="img/github.svg" alt="Github info icon"><span>/louisberns</span></li>
+            </a>
+            <a href="https://twitter.com/louisuntitled" target="_blank" class="list-item">
+              <li class="item-data"><img src="img/twitter.svg" alt="Twitter info icon"><span>@louisberns</span></li>
+            </a>
+            <a href="#" class="list-item" id="location-link">
+              <li class="item-data"><img src="img/location.svg" alt="Location info icon"><span>Maringá-PR - Brazil</span></li>
+            </a>
+          </ul>
+      </div>
     </div>
-    <div style="clear: both;"></div>
-    <div id="work-experience">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education">
-      <h2>Education</h2>
-    </div>
-    <div id="map-div">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="footer">
-      <ul id="footer-contacts" class="flex-box"></ul>
-    </div>
-    <div id="fab-button"></div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
-  <script src="js/helper-min.js"></script>
-
-  <script src="js/resumeBuilder-min.js"></script>
-
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFIkkUzJ45vp_BLVfwcAIaAR8bm5z4Ggs&libraries=places&callback=initMap"></script>
-
-  <script>
-      if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('top-contacts').style.display = 'block';
-      document.getElementById('top-contacts').style.background = '#000';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'block';
-      document.getElementById('header').style.background = '#000';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('work-experience').style.display = 'block';
-      document.getElementById('work-experience').style.background = '#000';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'block';
-      document.getElementById('projects').style.background = '#000';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'block';
-      document.getElementById('education').style.background = '#000';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('footer-contacts').style.display = 'block';
-      document.getElementById('footer-contacts').style.background = '#000';
-    }
-    if(document.getElementById('map') === null) {
-      document.getElementById('map-div').style.display = 'block';
-      document.getElementById('map-div').style.background = '#000';
-    }
-  </script>
+  </section>
+  <footer id="footer">
+    <script src="js/app.js" type="text/javascript"></script>
+  </footer>
 </body>
 </html>
